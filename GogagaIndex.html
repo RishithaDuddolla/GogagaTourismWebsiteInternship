@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light spacebetween">
+        <a class="navbar-brand" href="#">GOGAGA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse spacebetween" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" onclick="display('sectionHome')">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="display('sectionHolidayPackages')">Holiday Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="display('sectionFlightBooking')">Flight Booking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="display('sectionHotelBooking')">Hotel Booking</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" onclick="display('sectionServices')">Services </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="sectionHome">
+        <div class="bg-container d-flex flex-column justify-content-end">
+            <div class="tourism-card">
+                <h1 class="main-heading">Gogaga</h1>
+                <p class="paragraph">Explore the beauty of India,Plan your dream Trip now</p>
+                <button class="button" onclick="display('sectionHolidayPackages')">Get Started</button>
+            </div>
+        </div>
+    </div>
+    <div id="sectionHolidayPackages">
+        <div class="favourite-places-bg-container">
+            <h1 class="favourite-places-heading">Holiday Packages</h1>
+            <div class="favourite-place-card-container d-flex flex-row">
+                <div>
+                    <h1 class="favourite-place-card-heading">Taj Mahal</h1>
+                    <p class="favourite-place-card-description">
+                        If there was just one symbol to represent all of India, it would
+                        be the Taj Mahal
+                    </p>
+                    <button class="button" onclick="display('sectionTajMahalDetailedView')">More Details</button>
+                </div>
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-img.png" class="favourite-place-card-image" height="120px" />
+            </div>
+            <div class="favourite-place-card-container d-flex flex-row">
+                <div>
+                    <h1 class="favourite-place-card-heading">Golden Temple</h1>
+                    <p class="favourite-place-card-description">
+                        Amritsar is world-famous for the beautiful and highly revered Golden
+                        Temple
+                    </p>
+                    <button class="button" onclick="display('sectionGoldenTempleDetailedView')">More Details</button>
+                </div>
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/golden-temple-img.png" class="favourite-place-card-image" />
+            </div>
+            <div class="favourite-place-card-container d-flex flex-row">
+                <div>
+                    <h1 class="favourite-place-card-heading">Mysore Palace</h1>
+                    <p class="favourite-place-card-description">
+                        The Mysore Palace is a historical palace and the royal residence at
+                        Mysore .
+                    </p>
+                    <button class="button" onclick="display('sectionMysorePalaceDetailedView')">More Details</button>
+                </div>
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/mysore-palace-img.png" class="favourite-place-card-image" />
+            </div>
+            <div class="favourite-place-card-container d-flex flex-row">
+                <div>
+                    <h1 class="favourite-place-card-heading">Varanasi Temple</h1>
+                    <p class="favourite-place-card-description">
+                        Varanasi Temple is most famous Hindu temples dedicated to Lord Shiva
+                    </p>
+                    <button class="button" onclick="display('sectionVaranasiDetailedView')">More Details</button>
+                </div>
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/varanasi-temple-img.png" class="favourite-place-card-image" />
+            </div>
+            <button class="btn btn-dark" onclick="display('sectionHome')">back</button>
+        </div>
+    </div>
+
+
+    <div id="sectionTajMahalDetailedView">
+        <div class="detailed-view-bg-container">
+            <h1 class="detailed-view-heading">Detailed View</h1>
+            <div class="detailed-view-card-container">
+                <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-c1-img.png" class="d-block w-100" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-c2-img.png" class="d-block w-100" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-c3-img.png" class="d-block w-100" alt="..." />
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="detailed-view-card-text-container">
+                    <h1 class="detailed-view-card-heading">Taj Mahal</h1>
+                    <p class="detailed-view-card-description">
+                        The Taj Mahal is considered to be the greatest architectural achievement
+                        in the whole range of Indo-Islamic architecture. Its recognised
+                        architectonic beauty has a rhythmic combination of solids and voids,
+                        concave and convex and light shadow; such as arches and domes further
+                        increases the aesthetic aspect. Not a piece of architecture, as other
+                        buildings are, but the proud passions of an emperor’s love wrought in
+                        living stones.
+                    </p>
+                    <button class="button" onclick="display('sectionTajmahalpackageDetails')">Packages and More</button>
+                </div>
+            </div>
+            <button class="btn btn-dark" onclick="display('sectionHolidayPackages')">
+                back
+            </button>
+        </div>
+    </div>
+    <div id="sectionGoldenTempleDetailedView">
+        <div class="detailed-view-bg-container">
+            <h1 class="detailed-view-heading">Detailed View</h1>
+            <div class="detailed-view-card-container">
+                <div id="goldenTempleCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#goldenTempleCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#goldenTempleCarousel" data-slide-to="1"></li>
+                        <li data-target="#goldenTempleCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/goldentemple1-img.png" class="d-block w-100" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/goldentemple2-img.png" class="d-block w-100" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/goldentemple3-img.png" class="d-block w-100" alt="..." />
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#goldenTempleCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#goldenTempleCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="detailed-view-card-text-container">
+                    <h1 class="detailed-view-card-heading">Golden Temple</h1>
+                    <p class="detailed-view-card-description">
+                        The Golden Temple, also known as Harmandir Sahib is a gurdwara
+                        located in the city of Amritsar, Punjab, India. There are many
+                        places to visit Near Golden Temple like Jallianwala Bagh, Wagah Border, Harike Wetland, Bathinda Fort.
+                    </p>
+                    <button class="button" onclick="display('sectionGoldenTemplePackageDetails')">Packages and More</button>
+                </div>
+            </div>
+            <button class="btn btn-dark" onclick="display('sectionHolidayPackages')">
+                back
+            </button>
+        </div>
+    </div>
+    <div id="sectionMysorePalaceDetailedView">
+        <div class="detailed-view-bg-container">
+            <h1 class="detailed-view-heading">Detailed View</h1>
+            <div class="detailed-view-card-container">
+                <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://media.istockphoto.com/id/172124032/photo/mysore-palace-at-dusk.jpg?s=612x612&w=0&k=20&c=paO74C_dVsY14IbK0RNqs0TD-lSteQy-AW5CnQFEb_4=" class="d-block w-100" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://media.istockphoto.com/id/1281931838/photo/the-mysore-palace-at-night-in-mysore-in-southern-india.jpg?s=612x612&w=0&k=20&c=ylyE9VYrc008JnHKdXKDxbJx-_I2U8-oQFJDzwJk9Pw=" class="d-block w-100" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2020/09/17/18/10/palace-5579991_640.jpg" class="d-block w-100" alt="..." />
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="detailed-view-card-text-container">
+                    <h1 class="detailed-view-card-heading">Mysore Palace</h1>
+                    <p class="detailed-view-card-description">
+                        Mysore Palace, also known as Amba Vilas Palace, is a historical palace and a royal residence (house). It is located in Mysore, Karnataka, India. It used to be the official residence of the Wadiyar dynasty and the seat of the Kingdom of Mysore. The palace is in the centre of Mysore, and faces the Chamundi Hills eastward. Mysore is commonly described as the 'City of the Palaces', and there are seven palaces including this one. However, the Mysore Palace refers specifically to the one within the new fort.
+
+
+                    </p>
+                    <button class="button" onclick="display('sectionMysorePalacePackageDetails')">Packages and More</button>
+                </div>
+            </div>
+            <button class="btn btn-dark" onclick="display('sectionHolidayPackages')">
+                back
+            </button>
+        </div>
+    </div>
+    <div id="sectionVaranasiDetailedView">
+        <div class="detailed-view-bg-container">
+            <h1 class="detailed-view-heading">Detailed View</h1>
+            <div class="detailed-view-card-container">
+                <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://t3.ftcdn.net/jpg/00/52/13/02/360_F_52130287_B9UjW8keRJKChSGRsx2e6euercf9WK0Y.jpg" class="d-block w-100 h-60" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2019/12/Temples-In-Varanasi-cover_8th-Dec.jpg" class="d-block w-100 h-60" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://kevinstandagephotography.files.wordpress.com/2020/05/ksp_5381.jpg" class="d-block w-100 h-60" alt="..." />
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div class="detailed-view-card-text-container">
+                    <h1 class="detailed-view-card-heading">Varanasi Temple</h1>
+                    <p class="detailed-view-card-description">
+                        Kashi Vishvanath Temple is one of the most famous Hindu temples dedicated to Lord Shiva. It is located in Varanasi, Uttar Pradesh, India. The temple stands on the western bank of the holy river Ganga, and is one of the twelve Jyotirlingas, the holiest of Shivatemples. The main deity is known by the name Vishvanatha or Vishveshvara meaning Ruler of The Universe. Varanasi city is also called Kashi, and hence the temple is popularly called Kashi Vishvanath Temple.
+                    </p>
+                    <button class="button" onclick="display('sectionVaranasiTemplePackageDetails')">Packages and More</button>
+                </div>
+            </div>
+            <button class="btn btn-dark" onclick="display('sectionHolidayPackages')">
+                back
+            </button>
+        </div>
+    </div>
+    <div id="sectionFlightBooking">
+        <header class="header">Book Your Trip Flights
+        </header>
+        <main>
+            <section class="search">
+                <h2>Search for Flights</h2>
+                <form action="#" method="get">
+                    <label for="from">From:</label>
+                    <input type="text" id="from" name="from" required>
+                    <label for="to">To:</label>
+                    <input type="text" id="to" name="to" required>
+                    <label for="date">Departure Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    <button type="submit">Search</button>
+                </form>
+            </section>
+            <section class="results">
+                <h2>Search Results</h2>
+            </section>
+        </main>
+    </div>
+    <div id="sectionHotelBooking">
+        <header class="header">Hotel Booking
+        </header>
+        <section id="search">
+            <h2>Search and Book a Hotel</h2>
+            <form action="search.php" method="GET">
+                <input type="text" name="destination" placeholder="Enter destination">
+                <input type="date" name="check-in" placeholder="Check-in date" onclick="#">
+                <input type="date" name="check-out" placeholder="Check-out date" onclick="#">
+                <input type="number" name="guests" placeholder="Number of guests" onclick="#">
+                <button id="nonRedirectButton">Search</button>
+            </form>
+            <script>
+                var button = document.getElementById("nonRedirectButton");
+
+                button.addEventListener("click", function(event) {
+                    event.preventDefault();
+
+                    alert("Button clicked, but no redirect!");
+                });
+            </script>
+        </section>
+
+        <section id="hotels">
+            <div class="hotel">
+                <h2>Taj Mahal Hotel</h2>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget justo metus. Nullam varius suscipit arcu, sit amet scelerisque ex varius nec.</p>
+                <ul>
+                    <li>Single Room - $100 per night (1 person)</li>
+                    <li>Double Room - $150 per night (2 people)</li>
+                    <li>Suite - $250 per night (4 people)</li>
+                </ul>
+                <button class="button">Book Now</button>
+            </div>
+
+            <div class="hotel">
+                <h2>Golden Temple Hotel</h2>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget justo metus. Nullam varius suscipit arcu, sit amet scelerisque ex varius nec.</p>
+                <ul>
+                    <li>Single Room - $90 per night (1 person)</li>
+                    <li>Double Room - $130 per night (2 people)</li>
+                    <li>Suite - $220 per night (4 people)</li>
+                </ul>
+                <button class="button">Book Now</button>
+            </div>
+            <div class="hotel">
+                <h2>Mysore Palace Hotel</h2>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget justo metus. Nullam varius suscipit arcu, sit amet scelerisque ex varius nec.</p>
+                <ul>
+                    <li>Single Room - $90 per night (1 person)</li>
+                    <li>Double Room - $130 per night (2 people)</li>
+                    <li>Suite - $220 per night (4 people)</li>
+                </ul>
+                <button class="button">Book Now</button>
+            </div>
+            <div class="hotel">
+                <h2>Varansi Temple Hotel</h2>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget justo metus. Nullam varius suscipit arcu, sit amet scelerisque ex varius nec.</p>
+                <ul>
+                    <li>Single Room - $90 per night (1 person)</li>
+                    <li>Double Room - $130 per night (2 people)</li>
+                    <li>Suite - $220 per night (4 people)</li>
+                </ul>
+                <button class="button">Book Now</button>
+            </div>
+        </section>
+        <button class="btn btn-dark" onclick="display('sectionHome')">
+            back
+        </button>
+
+
+    </div>
+    <div id="sectionTajmahalpackageDetails">
+        <header class="header">
+            Gogaga Travel - Taj Mahal Packages
+        </header>
+        <main>
+            <section id="package-collections">
+                <div class="package-collection">
+                    <h2>Standard Package</h2>
+                    <p>Explore the Taj Mahal with our basic package which includes:</p>
+                    <ul>
+                        <li>Accommodation for 2 nights</li>
+                        <li>Guided tour of the temple</li>
+                        <li>Transportation</li>
+                    </ul>
+                    <button>Book Now</button>
+                </div>
+
+                <div class="package-collection">
+                    <h2>Premium Package</h2>
+                    <p>Experience the luxury of the Taj Mahal with our premium package including:</p>
+                    <ul>
+                        <li>Accommodation in a 5-star hotel for 3 nights</li>
+                        <li>Exclusive guided tour with a private guide</li>
+                        <li>Chauffeured transportation</li>
+                        <li>Special dinner at a renowned restaurant</li>
+                        <li>Spa treatments</li>
+                    </ul>
+                    <button>Book Now</button>
+                </div>
+            </section>
+            <button class="btn btn-dark" onclick="display('sectionTajMahalDetailedView')">
+                back
+            </button>
+        </main>
+    </div>
+    <div id="sectionGoldenTemplePackageDetails">
+        <header class="header">Gogaga Travel - Golden Temple Packages
+        </header>
+        <main>
+            <section id="package-collections">
+                <div class="package-collection">
+                    <h2>Standard Package</h2>
+                    <p>Explore the Golden Temple with our basic package which includes:</p>
+                    <ul>
+                        <li>Accommodation for 2 nights</li>
+                        <li>Guided tour of the temple</li>
+                        <li>Transportation</li>
+                    </ul>
+                    <button>Book Now</button>
+                </div>
+
+                <div class="package-collection">
+                    <h2>Premium Package</h2>
+                    <p>Experience the luxury of the Golden Temple with our premium package including:</p>
+                    <ul>
+                        <li>Accommodation in a 5-star hotel for 3 nights</li>
+                        <li>Exclusive guided tour with a private guide</li>
+                        <li>Chauffeured transportation</li>
+                        <li>Special dinner at a renowned restaurant</li>
+                        <li>Spa treatments</li>
+                    </ul>
+                    <button>Book Now</button>
+                </div>
+            </section>
+            <button class="btn btn-dark" onclick="display('sectionGoldenTempleDetailedView')">
+                back
+            </button>
+        </main>
+    </div>
+    <div id="sectionMysorePalacePackageDetails">
+        <header class="header">Gogaga Travel - Mysore Palace Packages
+        </header>
+        <section id="package-collections">
+            <div class="package-collection">
+                <h2>Standard Package</h2>
+                <p>Explore the Mysore Palace with our basic package which includes:</p>
+                <ul>
+                    <li>Accommodation for 2 nights</li>
+                    <li>Guided tour of the temple</li>
+                    <li>Transportation</li>
+                </ul>
+                <button>Book Now</button>
+            </div>
+
+            <div class="package-collection">
+                <h2>Premium Package</h2>
+                <p>Experience the luxury of the Mysore Palace with our premium package including:</p>
+                <ul>
+                    <li>Accommodation in a 5-star hotel for 3 nights</li>
+                    <li>Exclusive guided tour with a private guide</li>
+                    <li>Chauffeured transportation</li>
+                    <li>Special dinner at a renowned restaurant</li>
+                    <li>Spa treatments</li>
+                </ul>
+                <button>Book Now</button>
+            </div>
+        </section>
+        <button class="btn btn-dark" onclick="display('sectionMysorePalaceDetailedView')">
+            back
+        </button>
+    </div>
+    <div id="sectionVaranasiTemplePackageDetails">
+        <header class="header">Gogaga Travel - Varanasi Temple Packages
+        </header>
+        <section id="package-collections">
+            <div class="package-collection">
+                <h2>Standard Package</h2>
+                <p>Explore the Varanasi Temple with our basic package which includes:</p>
+                <ul>
+                    <li>Accommodation for 2 nights</li>
+                    <li>Guided tour of the temple</li>
+                    <li>Transportation</li>
+                </ul>
+                <button>Book Now</button>
+            </div>
+
+            <div class="package-collection">
+                <h2>Premium Package</h2>
+                <p>Experience the luxury of the Varanasi Temple with our premium package including:</p>
+                <ul>
+                    <li>Accommodation in a 5-star hotel for 3 nights</li>
+                    <li>Exclusive guided tour with a private guide</li>
+                    <li>Chauffeured transportation</li>
+                    <li>Special dinner at a renowned restaurant</li>
+                    <li>Spa treatments</li>
+                </ul>
+                <button>Book Now</button>
+            </div>
+        </section>
+        <button class="btn btn-dark" onclick="display('sectionVaranasiDetailedView')">
+            back
+        </button>
+    </div>
+
+    <div id="sectionServices">
+        <header class="header">
+            <h1 class="h1">
+                GoGaga Travel Agency</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#luxury">Luxury Facilities</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="hero">
+            <div class="hero-text">
+                <h2 class="h2">Discover the India with GoGaga</h2>
+                <p class="p text-center">Your Ultimate Travel Experience Begins Here</p>
+            </div>
+        </section>
+        <section id="services" class="section">
+            <h2 class="h2">Our Services</h2>
+            <div class="service">
+                <img src="https://assets.gqindia.com/photos/6540e2ba4622f7146b12b76b/16:9/w_2560%2Cc_limit/best-time-to-book-flights.jpg" alt="Flights" class="imge">
+                <h3>Flight Booking</h3>
+                <p>Explore the world with our hassle-free flight booking services.</p>
+            </div>
+            <div class="service">
+                <img src="https://www.itchotels.com/content/dam/itchotels/in/umbrella/fortune/experience-fortune-hotels/Fortune-Select-JP-Cosmos.png" alt="Hotels" class="imge">
+                <h3>Hotel Reservations</h3>
+                <p>Indulge in luxury accommodations with our curated hotel reservations.</p>
+            </div>
+            <div class="service">
+                <img src="https://www.libertytravel.com/sites/default/files/styles/full_size/public/1920x1080_10.jpg?itok=3e7w_GBU" alt="Tours" class="imge">
+                <h3>Guided Tours</h3>
+                <p>Embark on unforgettable guided tours to iconic destinations around the globe.</p>
+            </div>
+        </section>
+
+        <section id="luxury" class="section">
+            <h2 class="h2">Luxury Facilities</h2>
+            <div class="luxury-facility">
+                <img src="https://info.ehl.edu/hubfs/Blog-EHL-Insights/Blog-Header-EHL-Insights/wealth%20wellness.jpeg" alt="Spa" class="imge">
+                <h3>Spa & Wellness</h3>
+                <p>Relax and rejuvenate with our world-class spa and wellness facilities.</p>
+            </div>
+            <div class="luxury-facility">
+                <img src="https://narellanpools.com.au/wp-content/uploads/2023/08/1.jpg" alt="Pool" class="imge">
+                <h3>Infinity Pools</h3>
+                <p>Take a dip in our stunning infinity pools with breathtaking views.</p>
+            </div>
+            <div class="luxury-facility">
+                <img src="https://res.cloudinary.com/simpleview/image/upload/v1695829623/clients/batonrouge/Jordan_Hefler_Owned_2957_wl_67cba9f0_2c14_43e2_a1b3_270db6110d67_large_e2c22a9b-918d-41f3-95e8-8ec4cdcfe650.jpg" alt="Fine Dining" class="imge">
+                <h3>Fine Dining</h3>
+                <p>Indulge your taste buds with exquisite fine dining experiences.</p>
+            </div>
+        </section>
+        <section id="gallery" class="section">
+            <h2 class="h2">Gallery</h2>
+            <div class="image-gallery">
+                <img src="https://i0.wp.com/www.india-briefing.com/news/wp-content/uploads/2018/04/India-Brefing-India%E2%80%99s-Tourism-Sector-Dynamic-Market-Sees-New-Verticals-Growing-FDI.jpg?ssl=1" alt="Gallery Image 1" class="imge">
+                <img src="https://img.freepik.com/premium-photo/famous-taj-mahal-complex-beautiful-view-agra-uttar-pradesh-india_400112-863.jpg" alt="Gallery Image 2" class="imge">
+                <img src="https://cdn.tourradar.com/s3/serp/original/2398_BKrVtAjW.jpg" alt="Gallery Image 3" class="imge">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_15B4uty1U0fZVhHDyRqSCtMHlp3jnsRk7HIguPPz1U9dMKRocU3bEyeWalzT5EfjFXY&usqp=CAU" alt="Gallery Image 4" class="imge">
+            </div>
+        </section>
+        <section id="contact">
+            <i class="fa-solid fa-phone"></i>
+        </section>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>
