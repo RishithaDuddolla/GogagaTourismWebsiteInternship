@@ -13,6 +13,5 @@ Submit code files.
 Focus on functionality, responsiveness, and code quality.
 
 
-Deadline: 15-03-2024, 5PM
-Submission form : https://bit.ly/3Vdks3K
+
 
